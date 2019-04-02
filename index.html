@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+
+<body>
+    <h1>hello world</h1>
+
+</body>
+
+</html> -->
+
+<!-- подключаем сокет -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>socket.io</title>
+</head>
+
+<body>
+    <script>
+        var socket = io();
+    </script>
+    <h1>hello world</h1>
+</body>
+
+</html> -->
+
+<!-- нативные события -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>socket.io</title>
+</head>
+
+<body>
+    <script>
+        var socket = io();
+        socket.on('message', function (data) {
+            document.write(data)
+        });
+    </script>
+    <h1>hello world</h1>
+</body>
+
+</html> -->
+
+<!-- Cвои события -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>socket.io</title>
+</head>
+
+<body>
+    <script>
+        var socket = io();
+        socket.on('myEvent', function (data) {
+            console.log(data)
+            document.write(data.description)
+        });
+    </script>
+    <h1>hello world</h1>
+</body>
+
+</html> -->
+
+<!-- 5. Получени событий о клиента -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>socket.io</title>
+</head>
+
+<body>
+    <script>
+        var socket = io();
+        socket.emit('clientEvent', 'This is message from client');
+    </script>
+    <h1>hello world</h1>
+</body>
+
+</html> -->
+
+<!--  6 Широковещание -посыл событий всем подключенным клиентам -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>socket.io</title>
+</head>
+
+<body>
+    <script>
+        var socket = io();
+        socket.on('broadcast', function (data) {
+            document.body.innerHTML = '';
+            document.write(data.description);
+        });
+    </script>
+    <h1>hello world</h1>
+</body>
+
+</html
