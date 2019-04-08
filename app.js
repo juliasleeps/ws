@@ -91,7 +91,7 @@ io.on('connection', function (socket) {
     socket.broadcast.emit('broadcast', { description: users + ' users connected!' })
     socket.on('disconnect', () => {
         users--;
-        socket.broadcast.emit('broadcast', { description: users + ' users disconnected!' })
+        socket.broadcast.emit('broadcast', { description: users + ' users remain here!' })
     });
 });
 
